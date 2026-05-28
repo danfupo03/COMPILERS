@@ -43,11 +43,11 @@ class Parser:
 	def check(self, tag):
 		if self.token.tag == tag:
 			self.token = self.lex.scan()
-			print("", self.token)
+			#print("", self.token)
 		else:
 			text = 'expected '
 			if self.token.tag != Tag.ID:
-				print("tag = ", self.token.tag)
+				#print("tag = ", self.token.tag)
 				aux = Token(tag)
 				text = text + str(aux) + " before " + str(self.token) 
 			else:
